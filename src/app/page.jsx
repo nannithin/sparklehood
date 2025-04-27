@@ -98,12 +98,12 @@ export default function () {
             id='sort'
             value={sortOrder}
             onChange={e => setSortOrder(e.target.value)}
-            className=" p-2 rounded shadow hover:shadow-md bg-[#7808d0] outline-none pr-9 appearance-none"
+            className=" p-2 rounded shadow hover:shadow-md bg-[#7808d0] outline-none pr-9 appearance-none cursor-pointer"
           >
             <option value="Newest">Newest First</option>
             <option value="Oldest">Oldest First</option>
           </select>
-          <ArrowDownWideNarrow size={18} className='absolute top-1/2 -translate-y-1/2 right-2 pointer-events-none' />
+          <ArrowDownWideNarrow size={18} className='absolute top-1/2 -translate-y-1/2 right-2 pointer-events-none cursor-pointer' />
         </label>
       </div>
 
@@ -116,7 +116,7 @@ export default function () {
               <div className="flex justify-between items-center">
                 <div>
                   <h2 className="text-xl font-medium">{incident.title}</h2>
-                  <p className="text-sm text-gray-600">
+                  <p className="text-sm text-gray-400">
                     Severity: <span className="font-bold">{incident.severity}</span> | Reported: {formattedDate}
                   </p>
                 </div>
@@ -137,7 +137,7 @@ export default function () {
 
               </div>
               <div
-                className={`mt-2 text-gray-700 transition-all duration-500 ease-in-out overflow-hidden ${expandedIds.includes(incident.id) ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'
+                className={`mt-2 text-gray-300 transition-all text-sm duration-500 ease-in-out overflow-hidden ${expandedIds.includes(incident.id) ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'
                   }`}
               >
                 <p>{incident.description}</p>
